@@ -1,5 +1,5 @@
 function numPrimeArrangements(n) {
-    if(n<=2) return n
+    if(n<=1) return n
 
     const MOD = 1_000_000_007n;
     const totalPrimeNumber = sieveOfEratosthenes(n)
