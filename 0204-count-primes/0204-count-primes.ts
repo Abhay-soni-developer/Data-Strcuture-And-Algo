@@ -5,7 +5,7 @@ function countPrimes(n: number): number  {
     const isPrime = new Array()
     const arr = new Array(n+1)
     
-    for(let i=0; i<n; i++) {
+    for(let i=0; i<=n; i++) {
         arr[i]=i;
     }
     
@@ -18,7 +18,7 @@ function countPrimes(n: number): number  {
         }
     }
 
-    for(let i=2; i<=n; i++) {
+    for(let i=2; i<n; i++) {
         if(arr[i]) isPrime.push(i)
     } 
 
