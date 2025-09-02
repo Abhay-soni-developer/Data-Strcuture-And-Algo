@@ -18,16 +18,16 @@ function diagonalPrime(nums: number[][]): number {
     }
     const isPrime = sieveOfEratosthenes(daigonalHighestValue)
     console.log(isPrime)
-    let highestPrime = null;
+    let highestPrime = 0;
     
     mainDaigonal.forEach(num=>{
-        if(isPrime[num]) {
+        if(isPrime[num] && highestPrime<num) {
             highestPrime=num
         }
     })
 
     antiDaigonal.forEach(num=>{
-        if(isPrime[num]) {
+        if(isPrime[num] && highestPrime<num) {
             highestPrime=num
         }
     })
