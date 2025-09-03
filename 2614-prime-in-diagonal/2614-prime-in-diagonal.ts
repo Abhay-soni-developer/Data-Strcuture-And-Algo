@@ -42,7 +42,7 @@ function sieveOfEratosthenes(n: number): Int8Array {
 
     for(let i=2; i<=upto; i++){
         if(arr[i]===0) continue;
-        for(let k=i*i; i*k<=n; k++) {
+        for(let k=i; i*k<=n; k++) {
             arr[i*k]=0;
         }
     }
