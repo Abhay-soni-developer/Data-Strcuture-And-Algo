@@ -10,8 +10,6 @@ function diagonalPrime(nums: number[][]): number {
     const isPrime = sieveOfEratosthenes(daigonalHighestValue)
     let highestPrime = 0;
 
-    console.log(isPrime)
-
     for(let i=0; i<length; i++) {
        const t1 = nums[i][i]
         const t2 = nums[i][length-1-i]
