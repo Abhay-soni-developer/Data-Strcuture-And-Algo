@@ -30,13 +30,9 @@ function diagonalPrime(nums: number[][]): number {
 
 
 function sieveOfEratosthenes(n: number): Int8Array {
-    const arr = new Int8Array(n+1)
+    const arr = new Int8Array(n+1).fill(2,1)
     arr[0]=0
     arr[1]=0
-
-    for(let i=2; i<=n; i++) {
-        arr[i]=1;
-    }
     
     const upto = Math.floor(Math.sqrt(n))
 
