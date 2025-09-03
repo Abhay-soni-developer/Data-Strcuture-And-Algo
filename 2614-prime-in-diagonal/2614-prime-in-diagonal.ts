@@ -3,8 +3,8 @@ function diagonalPrime(nums: number[][]): number {
     let daigonalHighestValue = 0; 
     
     for(let i=0; i<length; i++) {
-        if(daigonalHighestValue<nums[i][i]) daigonalHighestValue=nums[i][i]
-        if(daigonalHighestValue<nums[i][length-1-i]) daigonalHighestValue=nums[i][length-1-i] 
+        if(nums[i][i]%2!==0 && daigonalHighestValue<nums[i][i]) daigonalHighestValue=nums[i][i]
+        if(nums[i][length-1-i]%2!==0 && daigonalHighestValue<nums[i][length-1-i]) daigonalHighestValue=nums[i][length-1-i] 
     }
 
     const isPrime = sieveOfEratosthenes(daigonalHighestValue)
