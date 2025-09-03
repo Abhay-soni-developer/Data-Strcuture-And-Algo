@@ -5,16 +5,10 @@ function diagonalPrime(nums: number[][]): number {
     for(let i=0; i<length; i++) {
         daigonal.push(nums[i][i])
         daigonal.push(nums[i][length-1-i])
-        if(nums[i][i]>=nums[i][length-1-i]) {
-            if(daigonalHighestValue<nums[i][i]) {
-                daigonalHighestValue=nums[i][i]
-            }
-        } else {
-            if(daigonalHighestValue<nums[i][length-1-i]) {
-                daigonalHighestValue=nums[i][length-1-i]
-            }
+        if(daigonalHighestValue<nums[i][i]) daigonalHighestValue=nums[i][i]
+        if(daigonalHighestValue<nums[i][length-1-i]) daigonalHighestValue=nums[i][length-i-1] 
         }
-    }
+
     const isPrime = sieveOfEratosthenes(daigonalHighestValue)
     let highestPrime = 0;
     
