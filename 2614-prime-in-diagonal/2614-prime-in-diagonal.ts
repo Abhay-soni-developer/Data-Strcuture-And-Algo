@@ -1,6 +1,7 @@
 function diagonalPrime(nums: number[][]): number {
     const length = nums.length;
     let daigonalHighestValue = 0; 
+    
     for(let i=0; i<length; i++) {
         if(daigonalHighestValue<nums[i][i]) daigonalHighestValue=nums[i][i]
         if(daigonalHighestValue<nums[i][length-1-i]) daigonalHighestValue=nums[i][length-1-i] 
@@ -29,8 +30,8 @@ function diagonalPrime(nums: number[][]): number {
 };
 
 
-function sieveOfEratosthenes(n: number): Int8Array {
-    const arr = new Int8Array(n+1).fill(1,2)
+function sieveOfEratosthenes(n: number): Uint8Array {
+    const arr = new Uint8Array(n+1).fill(1,2)
     
     arr[0]=0
     arr[1]=0
