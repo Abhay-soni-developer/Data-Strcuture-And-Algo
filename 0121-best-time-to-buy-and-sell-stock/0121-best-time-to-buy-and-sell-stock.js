@@ -5,15 +5,14 @@
 
 
 var maxProfit = function(prices) {
-    let minPrice = Infinity;
-    let highestProfit = 0;
+    let best = 0;
+    let current = 0;
 
-    
-    for (let p of prices) {
-        if(p<minPrice) minPrice=p;
-        let profit = p-minPrice
-        if(profit>highestProfit) highestProfit=profit
+    for(let i=0; i<prices.length-1; i++) {
+        let diff = prices[i+1]-prices[i];
+        current = Math.max(0, current+diff)
+        best=Math.max(current, best)
     }
 
-    return highestProfit;
+    return best;
 };
