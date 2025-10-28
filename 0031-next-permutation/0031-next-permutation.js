@@ -10,7 +10,7 @@ function nextPermutation(arr) {
     }
     
     if(i===null) {
-        arr.sort((a,b)=>a-b)
+        reverse(arr, 0, arr.length-1)
         return arr;
     }
     
@@ -38,7 +38,6 @@ function reverse(arr, start, end) {
         end--;
     }
 }
-
 
 // algorith explained
 
