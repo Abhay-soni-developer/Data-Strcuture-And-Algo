@@ -4,11 +4,9 @@
  */
 var singleNumber = function(nums) {
     nums.sort()
-
-    for(let i=0; i<=nums.length-1; i=i+2) {
-        if(nums[i]!==nums[i+1]) {
-            return nums[i]
-        }
+    let result = 0;
+    for(let i=0; i<=nums.length-1; i++) {
+        result=result^nums[i]
     }
-
+    return result;
 };
