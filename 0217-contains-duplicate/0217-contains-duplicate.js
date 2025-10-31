@@ -3,10 +3,10 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    let dict = {}
+    let set = new Set()
     for(let i=0; i<=nums.length-1; i++) {
-        if(dict[nums[i]]) return true
-        dict[nums[i]]=true;
+        set.add(nums[i]);
     }
-    return false;
+    if(set.size===nums.length) return false;
+    return true;
 };
