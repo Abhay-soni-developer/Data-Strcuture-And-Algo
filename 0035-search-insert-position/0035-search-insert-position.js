@@ -1,50 +1,25 @@
-
-var searchInsert = function (nums, target) {
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(arr, k) {
     let start = 0;
-    let end = nums.length - 1;
+    let end = arr.length - 1;
+    let mid = Math.floor((start + end) / 2)
 
-    if (start === end) {
-        if (nums[start] >= target) {
-            return 0;
-        }
-        return 1;
-    }
+    while (start <= end) {
 
-    if (target < nums[start] || target === nums[start]) {
-        return 0;
-    } else if (target > nums[end]) {
-        return end + 1;
-    }
-
-    let mid = Math.floor((end + start) / 2)
-
-    while (start !== end) {
-
-        console.log(start, mid, end)
-
-        if (nums[mid] === target) {
-            return mid;
-        } else if (nums[mid] > target) {
-            end = mid;
-            mid = Math.floor((end + start) / 2)
-        } else if (nums[mid] < target) {
-            start = mid;
-            mid = Math.floor((end + start) / 2)
+        if (arr[mid] === k) {
+            return mid
+        } else if (arr[mid] < k) {
+            start = mid + 1
+        } else if (arr[mid] > k) {
+            end = mid - 1;
         }
 
-        // element does not exist or start/end is the element
-        if (start === mid) {
-            console.log(start, mid, end)
-            if (nums[start] === target) {
-                return start
-            } else if (nums[end] === target) {
-                return end
-            } else {
-                return start + 1
-            }
-        }
-
+        mid = Math.floor((start + end) / 2)
     }
 
-    return mid;
+    return start
 };
