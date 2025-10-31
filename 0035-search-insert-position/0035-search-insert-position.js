@@ -6,9 +6,9 @@
 var searchInsert = function(arr, k) {
     let start = 0;
     let end = arr.length - 1;
-    let mid = Math.floor((start + end) / 2)
 
     while (start <= end) {
+        let mid = Math.floor((start + end) / 2)
 
         if (arr[mid] === k) {
             return mid
@@ -17,8 +17,6 @@ var searchInsert = function(arr, k) {
         } else if (arr[mid] > k) {
             end = mid - 1;
         }
-
-        mid = Math.floor((start + end) / 2)
     }
 
     return start
