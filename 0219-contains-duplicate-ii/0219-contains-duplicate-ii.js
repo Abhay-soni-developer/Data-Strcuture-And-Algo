@@ -14,8 +14,6 @@ var containsNearbyDuplicate = function(nums, k) {
         }
     }
 
-    console.log(map)
-
     for(let key in map) {
         if(map[key].length>1) {
             const x = map[key]
