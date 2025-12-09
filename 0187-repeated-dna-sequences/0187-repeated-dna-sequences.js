@@ -79,42 +79,26 @@
 // };
 
 
-
-
-
-function* rollingHash(str, size) {
-    for (let i = 0; i <= str.length - size; i++) {
-        yield str.slice(i, i+size)
-    }
-
-    return true
-}
-
-function rabinKarp(text) {
+var findRepeatedDnaSequences = function(str) {
     const set = new Set()
     const res = new Set()
-
-    const rh = rollingHash(text, 10)
+    const size = 10;
     let i = 0;
 
-    for (let val of rh) {  
-        if(set.has(val)) {
-            res.add(val)
+
+    for (let i = 0; i <= str.length - size; i++) {
+        const temp = str.slice(i, i+size)
+        if(set.has(temp)) {
+            res.add(temp)
         } else {
-            set.add(val)
+            set.add(temp)
         }
     }
 
     const result = []
-    
     for (let s of res.values()) {
         result.push(s)
     }
 
     return result;
-}
-
-
-var findRepeatedDnaSequences = function(s) {
-    return rabinKarp(s)
 };
