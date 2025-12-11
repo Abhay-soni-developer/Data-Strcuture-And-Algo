@@ -20,14 +20,13 @@ var longestDupSubstring = function(s) {
 function suffixArray(str) {
     let sortedSuffixList = []
     let temp = ""
+    const len = str.length;
 
     for(let i=str.length-1; i>=0; i--) {
-        temp = str[i]+temp
-        sortedSuffixList.push(temp)
+        sortedSuffixList.push(str.slice(i, len))
     }
 
     sortedSuffixList = sortedSuffixList.sort()
-    const len = sortedSuffixList.length;
     const suffixArray = sortedSuffixList.map(el=>len-el.length)
 
     return [sortedSuffixList, suffixArray]
