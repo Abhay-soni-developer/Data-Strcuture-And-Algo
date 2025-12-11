@@ -3,14 +3,14 @@
  * @return {string}
  */
 var longestDupSubstring = function(s) {
-    const [sortedSuffixList, sa] = suffixArray(s)
+    const sa = suffixArray(s)
     const rankArray = createRankArray(sa)
     const lcp = createLcp(s, rankArray, sa)
     let dupLongestSubStr = ""
 
     for(let i=0; i<lcp.length; i++) {
         if(lcp[i]>dupLongestSubStr.length) {
-            dupLongestSubStr = sortedSuffixList[i].slice(0, lcp[i])
+            dupLongestSubStr = s.slice(sa[i], sa[i]+lcp[i])
         }        
     }
 
@@ -29,7 +29,7 @@ function suffixArray(str) {
     sortedSuffixList = sortedSuffixList.sort()
     const suffixArray = sortedSuffixList.map(el=>len-el.length)
 
-    return [sortedSuffixList, suffixArray]
+    return suffixArray
 }
 
 function createRankArray(suffixArray) {
