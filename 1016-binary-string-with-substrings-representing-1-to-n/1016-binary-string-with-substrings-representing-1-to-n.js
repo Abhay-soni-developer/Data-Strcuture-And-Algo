@@ -9,6 +9,7 @@ var queryString = function(s, n) {
 
 
     for(let i=0; i<s.length; i++) {
+        if(s[i]==="0") continue;
         let temp = ""
         for(let j=0; j<len; j++) {
             temp=temp+s[i+j]
