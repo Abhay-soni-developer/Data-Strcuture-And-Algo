@@ -10,19 +10,18 @@ var queryString = function(s, n) {
 
     for(let i=0; i<s.length; i++) {
         if(s[i]==="0") continue;
-        let temp = ""
         for(let j=0; j<len; j++) {
-            temp=temp+s[i+j]
-            const num = parseInt(temp, 2)
+            const num = parseInt(s.substr(i, j+1), 2)
             if(num>0 && num<=n) {
                 set.add(num)
             }
         }
+
+        if(set.size===n) {
+            return true
+        }
     }
 
-    if(set.size===n) {
-        return true
-    }
 
     return false
 };
