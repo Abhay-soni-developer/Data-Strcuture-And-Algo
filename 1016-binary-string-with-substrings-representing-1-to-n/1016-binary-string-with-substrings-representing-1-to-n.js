@@ -14,6 +14,8 @@ var queryString = function(s, n) {
             const num = parseInt(s.substr(i, j+1), 2)
             if(num>0 && num<=n) {
                 set.add(num)
+            } else if(num>n) {
+                break;
             }
         }
 
