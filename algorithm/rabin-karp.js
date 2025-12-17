@@ -8,7 +8,7 @@ BPowers = [1]
 
 function BPower(power) {
 
-    if (BPowers.length - 1 >= power) {
+    if (BPowers[power]) {
         return BPowers[power]
     }
 
@@ -19,7 +19,7 @@ function BPower(power) {
         i++;
     }
 
-    return BPowers[20]
+    return BPowers[power]
 }
 
 
@@ -40,7 +40,7 @@ function* rollingHash(str, size) {
             let hash = lastComputedHash - (((toVal(str[i - 1]) * BPower(size - 1))) % M)
             hash = (hash + M) % M
             hash = (hash * B) % M
-            hash = hash + toVal(str[i + size - 1])
+            hash = (hash + toVal(str[i + size - 1])) % M
             lastComputedHash = hash
         }
 
@@ -65,4 +65,3 @@ function rabinKarp(text, pat) {
     return false;
 }
 
-console.log(rabinKarp("abcdefghi", "efi"))
