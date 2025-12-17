@@ -31,11 +31,11 @@ Trie.prototype.insert = function(word) {
 Trie.prototype.search = function(word) {
     let currentNode = this.root
     for(let i=0; i<word.length; i++) {
-        if(currentNode.nextCharPointers[word.charCodeAt(i)-97]) {
-            currentNode = currentNode.nextCharPointers[word.charCodeAt(i)-97]
-        } else {
+        if(currentNode.nextCharPointers[word.charCodeAt(i)-97]==null) {
             return false;
         }
+        
+        currentNode = currentNode.nextCharPointers[word.charCodeAt(i)-97]
 
         if(i===word.length-1 && currentNode.end>0) {
             return true
@@ -52,11 +52,11 @@ Trie.prototype.search = function(word) {
 Trie.prototype.startsWith = function(prefix) {
     let currentNode = this.root
     for(let i=0; i<prefix.length; i++) {
-        if(currentNode.nextCharPointers[prefix.charCodeAt(i)-97]) {
-            currentNode = currentNode.nextCharPointers[prefix.charCodeAt(i)-97]
-        } else {
+        if(currentNode.nextCharPointers[prefix.charCodeAt(i)-97]===null) {
             return false;
         }
+        
+        currentNode = currentNode.nextCharPointers[prefix.charCodeAt(i)-97]
 
         if(i===prefix.length-1) {
             return true
