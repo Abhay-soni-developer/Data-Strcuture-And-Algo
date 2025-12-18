@@ -3,21 +3,26 @@
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function(arr, k) {
-    let start = 0;
-    let end = arr.length - 1;
+var searchInsert = function(nums, target) {
+    const ub = ubBinarySearch(nums, target)
 
-    while (start <= end) {
-        let mid = Math.floor((start + end) / 2)
-
-        if (arr[mid] === k) {
-            return mid
-        } else if (arr[mid] < k) {
-            start = mid + 1
-        } else if (arr[mid] > k) {
-            end = mid - 1;
-        }
+    if(ub>0 && nums[ub-1]===target) {
+        return ub-1 // exact found
     }
 
-    return start
+    return ub
 };
+
+// upperbound binary search
+function ubBinarySearch(nums, target) {
+    let [low, high] = [0, nums.length]
+
+    while(low<high) {
+        let mid = (low+high)>>1
+
+        if(nums[mid]<=target) low=mid+1;
+        else high = mid;
+    }
+
+    return low
+}
