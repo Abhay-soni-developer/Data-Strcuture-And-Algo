@@ -5,7 +5,7 @@
  */
 var nextGreatestLetter = function(letters, target) {
     let index = binarySearch(letters, target)
-    console.log(index)
+
     if(index>letters.length-1) {
         return letters[0]
     }
