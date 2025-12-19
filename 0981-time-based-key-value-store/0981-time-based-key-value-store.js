@@ -19,7 +19,7 @@ TimeMap.prototype.get = function(key, timestamp) {
         let [low, high] = [0, arr.length]
 
         while(low<high) {
-            const mid = Math.floor((high+low)/2)
+            const mid = low + Math.floor((high-low)/2)
 
             if(arr[mid][0]>target) high = mid;
             else low = mid+1;
