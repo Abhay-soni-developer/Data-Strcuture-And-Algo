@@ -59,34 +59,29 @@ Trie.prototype.search = function (searchTerm, i = 0, node = null) {
     if (i === searchTerm.length - 1) {
         if (searchTerm[i] === ".") {
             for (let i = 0; i < 26; i++) {
-                if (currentNode.next[i] && currentNode.next[i].we > 0) return true
+                const child = currentNode.next[i];
+                if (child && child.we > 0) return true
             }
             return false
         } else {
-            if (currentNode.next[getCode(searchTerm, i)] && currentNode.next[getCode(searchTerm, i)].we > 0) return true;
+            const child = currentNode.next[getCode(searchTerm, i)]
+            if (child && child.we > 0) return true;
             return false;
         }
     } else {
         if (searchTerm[i] === ".") {
             for (let j = 0; j < 26; j++) {
                 if (currentNode.next[j]) {
-                    if (this.search(
-                        searchTerm,
-                        i + 1,
-                        currentNode.next[j]
-                    )) return true;
+                    if (this.search(searchTerm, i + 1, currentNode.next[j])) {
+                        return true;
+                    }
                 }
             }
             return false;
         } else {
-
             let child = currentNode.next[getCode(searchTerm, i)]
-            if(!child) return false;
-            return this.search(
-                searchTerm,
-                i + 1,
-                currentNode.next[getCode(searchTerm, i)]
-            )
+            if (!child) return false;
+            return this.search(searchTerm, i + 1, child)
         }
     }
 }
