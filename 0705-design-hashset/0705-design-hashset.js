@@ -29,8 +29,6 @@ MyHashSet.prototype.add = function (key) {
         this.resize()
     }
 
-    if (this.contains(key)) return this.array
-
     const index = key % this.array.length
     const newNode = new Node(key)
 
@@ -38,8 +36,10 @@ MyHashSet.prototype.add = function (key) {
         this.array[index] = newNode;
     } else {
         let bucketChain = this.array[index];
-
+        if (bucketChain.key === key) return this.array
+        
         while (bucketChain && bucketChain.next) {
+            if (bucketChain.next.key === key) return this.array
             bucketChain = bucketChain.next
         }
 
@@ -106,7 +106,7 @@ MyHashSet.prototype.resize = function (key) {
     this.array = newArr;
 
     // reset when you generate a new array
-    this.elementCount=0;
+    this.elementCount = 0;
     for (let i = 0; i < oldArr.length; i++) {
         if (oldArr[i]) {
             let node = oldArr[i];
