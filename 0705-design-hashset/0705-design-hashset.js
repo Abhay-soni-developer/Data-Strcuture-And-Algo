@@ -5,7 +5,7 @@ function Node(key) {
 }
 
 var MyHashSet = function () {
-    this.thresholdLoadfactor = 0.75;
+    this.thresholdLoadFactor = 0.75;
     this.elementCount = 0;
     this.array = new Array(MyHashSet.sizes[2]).fill(null)
 };
@@ -25,7 +25,7 @@ MyHashSet.sizes = [
  * @return {void}
  */
 MyHashSet.prototype.add = function (key) {
-    if (this.elementCount / this.array.length > 0.75) {
+    if (this.elementCount / this.array.length > this.thresholdLoadFactor) {
         this.resize()
     }
 
