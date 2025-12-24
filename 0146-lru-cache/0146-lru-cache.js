@@ -43,7 +43,7 @@ LRUCache.prototype.put = function (key, value) {
         this.removeNode(node)
         this.addNodeToStart(node)
     } else {
-        const newNode = new Node(key, value, null, this.start)
+        const newNode = new Node(key, value)
         this.map.set(key, newNode)
         this.addNodeToStart(newNode)
 
@@ -52,14 +52,12 @@ LRUCache.prototype.put = function (key, value) {
             this.end = newNode;
         }
 
-        // remove last node, if capacity exceeds
         if (this.map.size > this.capacity) {
             this.map.delete(this.end.key)
             this.removeNode(this.end)
         }
     }
 };
-
 
 LRUCache.prototype.removeNode = function (node) {
 
@@ -87,9 +85,11 @@ LRUCache.prototype.removeNode = function (node) {
 
 
 LRUCache.prototype.addNodeToStart = function (node) {
-    if (this.start === node || this.start === null) {
-        this.start = node
-        return this.node
+    if (this.start === node ) {
+        return node;
+    } else if (this.start === null) {
+        this.start = node;
+        return node;
     }
 
 
