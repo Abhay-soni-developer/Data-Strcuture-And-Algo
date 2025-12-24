@@ -12,10 +12,10 @@ RandomizedCollection.prototype.insert = function (val) {
     const index = this.array.push(val)
 
     if (this.map.has(val)) {
-        this.map.get(val).push(index-1)
+        this.map.get(val).add(index-1)
         return false;
     } else {
-        this.map.set(val, [index-1])
+        this.map.set(val, new Set([index-1]))
         return true
     }
 };
@@ -26,10 +26,11 @@ RandomizedCollection.prototype.insert = function (val) {
  */
 RandomizedCollection.prototype.remove = function (val) {
     if (this.map.has(val)) {
-        const arr = this.map.get(val)
-        const index = arr.pop()
+        const set = this.map.get(val)
+        const index = set.keys().next().value
+        set.delete(index)
         
-        if (arr.length === 0) {
+        if (set.size===0) {
             this.map.delete(val)
         }
         
@@ -40,11 +41,9 @@ RandomizedCollection.prototype.remove = function (val) {
 
         this.array[index]=this.array.pop()
 
-        const lastKeyArr = this.map.get(this.array[index])
-
-        const newArr = lastKeyArr.filter(el=>el!==this.array.length)
-        newArr.push(index)
-        this.map.set(this.array[index], newArr)
+        const lastKeySet = this.map.get(this.array[index])
+        lastKeySet.add(index)
+        lastKeySet.delete(this.array.length)
         return true
     }
     return false
