@@ -62,6 +62,8 @@ LRUCache.prototype.put = function (key, value) {
 LRUCache.prototype.removeNode = function (node) {
 
     if (node.prev === null && node.next === null) {
+        this.start = null
+        this.end = null
         return node;
     } else if (node.prev === null && node.next) {
         node.next.prev = null;
@@ -89,6 +91,7 @@ LRUCache.prototype.addNodeToStart = function (node) {
         return node;
     } else if (this.start === null) {
         this.start = node;
+        this.end = node;
         return node;
     }
 
