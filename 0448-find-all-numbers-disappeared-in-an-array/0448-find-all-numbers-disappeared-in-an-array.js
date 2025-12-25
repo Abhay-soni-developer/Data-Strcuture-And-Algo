@@ -4,7 +4,7 @@
  */
 var findDisappearedNumbers = function (nums) {
     let i = 0;
-    let set = new Set()
+    let result = []
 
     while (i < nums.length) {
         const correctedIndex = nums[i]-1
@@ -24,8 +24,8 @@ var findDisappearedNumbers = function (nums) {
     }
 
     for(let i=0; i<nums.length; i++) {
-        if(nums[i]-1!==i) set.add(i+1)
+        if(nums[i]-1!==i) result.push(i+1)
     }
 
-    return [...set]
+    return result
 };
