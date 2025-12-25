@@ -9,7 +9,7 @@ var findDisappearedNumbers = function (nums) {
     while (i < nums.length) {
         const correctedIndex = nums[i]-1
 
-        if(nums[i]===nums[correctedIndex]) {
+        if(nums[i]===nums[correctedIndex] || nums[i]-1===i) {
             i++;
             continue;
         }
@@ -18,8 +18,6 @@ var findDisappearedNumbers = function (nums) {
             let temp = nums[i]
             nums[i] = nums[correctedIndex]
             nums[correctedIndex] = temp;
-        } else if (nums[i]-1===i) {
-            i++;
         }
     }
 
