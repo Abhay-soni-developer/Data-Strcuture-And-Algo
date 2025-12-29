@@ -122,6 +122,6 @@ const tests = [
     "abcabcabcabc"
 ];
 
-// tests.forEach(t => {
-//     console.log(t, "=>", genLps(t));
-// });
+tests.forEach(t => {
+    console.log(t, "=>", genLps(t));
+});
