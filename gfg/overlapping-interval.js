@@ -1,3 +1,5 @@
+// naive 
+
 class Solution {
     mergeOverlap(arr) {
         arr.sort((a, b) => a[0] - b[0])
