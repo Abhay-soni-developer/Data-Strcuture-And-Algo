@@ -5,17 +5,19 @@
  */
 var timeLimit = function (fn, t) {
     return async function (...args) {
-        return new Promise(async (resolve, reject) => {
+        return new Promise((resolve, reject) => {
             const token = setTimeout(() => {
                 reject("Time Limit Exceeded");
             }, t)
-            try {
-                const result = await fn(...args);
-                clearTimeout(token);
-                resolve(result);
-            } catch(e) {
-                reject(e);
-            }
+
+            fn(...args).then((result) => {
+                resolve(result)
+            }).catch(err => {
+                reject(err)
+            }).finally(() => {
+                clearTimeout(token)
+            })
+
 
         })
     }
