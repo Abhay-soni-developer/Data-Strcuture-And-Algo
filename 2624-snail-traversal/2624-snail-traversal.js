@@ -4,29 +4,31 @@
  * @return {Array<Array<number>>}
  */
 Array.prototype.snail = function (rowsCount, colsCount) {
-    if (this.length == rowsCount * colsCount) {
-        const result = Array.from({ length: rowsCount }, () => []);
-        let start = 0;
+    if (this.length != rowsCount * colsCount) {
+        return [];
 
-        for (let i = 0; i < colsCount; i++) {
-            if (i % 2 == 0) {
-                for (let j = 0; j < rowsCount; j++) {
-                    result[j].push(this[start]);
-                    start++;
-                }
-            } else {
-                for (let j = rowsCount-1; j >= 0; j--) {
-                    result[j].push(this[start]);
-                    start++;
-                }
-            }
-
-
-
-        }
-        return result;
     }
-    return [];
+    
+    const result = Array.from({ length: rowsCount }, () => []);
+    let start = 0;
+
+    for (let i = 0; i < colsCount; i++) {
+        if (i % 2 == 0) {
+            for (let j = 0; j < rowsCount; j++) {
+                result[j].push(this[start]);
+                start++;
+            }
+        } else {
+            for (let j = rowsCount - 1; j >= 0; j--) {
+                result[j].push(this[start]);
+                start++;
+            }
+        }
+
+
+
+    }
+    return result;
 }
 
 /**
