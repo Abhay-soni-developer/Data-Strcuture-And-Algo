@@ -45,6 +45,12 @@ function checkIfStringExist(s, trie, memo) {
 
     }
 
+    if (i === s.length) {
+        return true;
+    }
+
+    return false;
+
 }
 
 
