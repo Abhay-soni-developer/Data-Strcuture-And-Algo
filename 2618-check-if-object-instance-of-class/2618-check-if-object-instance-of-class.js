@@ -5,17 +5,17 @@
  */
 var checkIfInstanceOf = function (obj, classFunction) {
 
-    if(obj === null || obj === undefined || Number.NaN === obj || classFunction === null || classFunction === undefined) {
+    if (obj === null || obj === undefined || classFunction === null || classFunction === undefined) {
         return false;
     }
-    
-    let proto = obj['__proto__']
 
-    while(proto) {
-        if(proto === classFunction.prototype) {
+    let proto = Object.getPrototypeOf(obj)
+
+    while (proto) {
+        if (proto === classFunction.prototype) {
             return true
         }
-        proto = proto['__proto__']
+        proto = Object.getPrototypeOf(proto)
     }
 
     return false;
