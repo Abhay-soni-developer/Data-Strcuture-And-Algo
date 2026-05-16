@@ -8,14 +8,14 @@ var expect = function(val) {
             if(arg === val) {
                 return true
             }
-            throw Error("Not Equal")
+            throw new Error("Not Equal")
         },
 
         notToBe: function(arg) {
             if(arg !== val) {
                 return true
             }
-            throw Error("Equal")
+            throw new Error("Equal")
         }
     }
 };
