@@ -3,18 +3,14 @@
  * @return {Function}
  */
 function memoize(fn) {
-    const memo = new Map()
+    const cache = new Map()
     return function(...args) {
-        if(!memo.has(fn)) {
-            memo.set(fn, new Map())
-        }
-
-        const cache = memo.get(fn);
-        if(cache.has(args.toString())) {
-            return cache.get(args.toString())
+        const key = args.toString();
+        if(cache.has(key)) {
+            return cache.get(key)
         } else {
             const result  = fn(...args)
-            cache.set(args.toString(), result)
+            cache.set(key, result)
             return result;
         }
 
