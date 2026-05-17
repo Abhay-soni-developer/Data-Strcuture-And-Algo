@@ -1,6 +1,5 @@
 class EventEmitter {
     events = {}
-    counter=0;
     /**
      * @param {string} eventName
      * @param {Function} callback
@@ -10,8 +9,7 @@ class EventEmitter {
         if (!this.events[eventName]) {
             this.events[eventName] = {}
         }
-        const uid = this.counter;
-        this.counter++;
+        const uid = Math.random().toString(36).substring(2, 10);
         this.events[eventName][uid] = callback
 
         return {
