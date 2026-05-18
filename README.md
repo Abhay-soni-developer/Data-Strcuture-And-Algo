@@ -43,4 +43,12 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
+## Binary Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0374-guess-number-higher-or-lower](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0374-guess-number-higher-or-lower/) | Easy |
+## Interactive
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0374-guess-number-higher-or-lower](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 <!---LeetCode Topics End-->
