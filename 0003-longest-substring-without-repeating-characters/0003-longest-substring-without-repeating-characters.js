@@ -21,7 +21,7 @@ var lengthOfLongestSubstring = function (s) {
         }
 
 
-        if (uniLen < (end-start+1)) {
+        if (uniLen < (end-start)) {
             uniLen = (end-start);
         }
     }
