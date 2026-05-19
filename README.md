@@ -7,6 +7,7 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0013-roman-to-integer](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0013-roman-to-integer/) | Easy |
 | [0020-valid-parentheses](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0020-valid-parentheses/) | Easy |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 | [0290-word-pattern](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0290-word-pattern/) | Easy |
@@ -33,6 +34,7 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+| [0013-roman-to-integer](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0013-roman-to-integer/) | Easy |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 | [0290-word-pattern](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0290-word-pattern/) | Easy |
 ## Dynamic Programming
@@ -59,4 +61,8 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0013-roman-to-integer](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0013-roman-to-integer/) | Easy |
 <!---LeetCode Topics End-->
