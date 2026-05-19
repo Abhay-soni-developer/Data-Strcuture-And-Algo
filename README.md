@@ -6,6 +6,7 @@ lets write some solutions
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0020-valid-parentheses](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0020-valid-parentheses/) | Easy |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 | [0316-remove-duplicate-letters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0316-remove-duplicate-letters/) | Medium |
@@ -30,6 +31,7 @@ lets write some solutions
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -51,4 +53,8 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0374-guess-number-higher-or-lower](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0374-guess-number-higher-or-lower/) | Easy |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 <!---LeetCode Topics End-->
