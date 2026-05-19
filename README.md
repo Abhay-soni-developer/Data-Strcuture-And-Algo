@@ -9,6 +9,7 @@ lets write some solutions
 | [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0020-valid-parentheses](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0020-valid-parentheses/) | Easy |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
+| [0290-word-pattern](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0290-word-pattern/) | Easy |
 | [0316-remove-duplicate-letters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [1446-consecutive-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/1446-consecutive-characters/) | Easy |
 ## Stack
@@ -33,6 +34,7 @@ lets write some solutions
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
+| [0290-word-pattern](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0290-word-pattern/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
