@@ -1,23 +1,23 @@
 /**
  * @return {Generator<number>}
  */
-var fibGenerator = function*() {
-    const arr = [0, 1];
-    let i=0;
+// var fibGenerator = function*() {
+//     const arr = [0, 1];
+//     let i=0;
 
-    while(true) {
-        if(arr[i]===undefined) {
-            arr[i]=arr[i-2]+arr[i-1];
-            yield arr[i];
-            i++;
-            continue;
-        } 
-        yield arr[i];
-        i++;
-    }
+//     while(true) {
+//         if(arr[i]===undefined) {
+//             arr[i]=arr[i-2]+arr[i-1];
+//             yield arr[i];
+//             i++;
+//             continue;
+//         } 
+//         yield arr[i];
+//         i++;
+//     }
 
-    return true;
-};
+//     return true;
+// };
 
 var fibGenerator = function*() {
     let el1 = 0; el2 = 1;
@@ -26,10 +26,8 @@ var fibGenerator = function*() {
     yield el2;
 
     while(true) {
-        const el3 = el1+el2
-        el1 = el2;
-        el2 = el3
-        yield el3;
+        [el1, el2] = [el2, el1+el2]
+        yield el2;
     }
 
     return true;
