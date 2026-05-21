@@ -32,7 +32,7 @@ var flat = function (arr, n, result = []) {
     }
 
     for (let item of arr) {
-        if (item instanceof Array) {
+        if (Array.isArray(item)) {
             const temp = flat(item, n - 1, result);
             continue;
         }
