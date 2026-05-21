@@ -19,6 +19,22 @@ var fibGenerator = function*() {
     return true;
 };
 
+var fibGenerator = function*() {
+    let el1 = 0; el2 = 1;
+
+    yield el1;
+    yield el2;
+
+    while(true) {
+        const el3 = el1+el2
+        el1 = el2;
+        el2 = el3
+        yield el3;
+    }
+
+    return true;
+};
+
 /**
  * const gen = fibGenerator();
  * gen.next().value; // 0
