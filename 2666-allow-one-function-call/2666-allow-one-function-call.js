@@ -3,10 +3,10 @@
  * @return {Function}
  */
 var once = function(fn) {
-    let counter = 0;
+    let hasBeenCalled = false;
     return function(...args){
-        counter++;
-        if(counter<=1) {
+        if(!hasBeenCalled) {
+            hasBeenCalled=true
             return fn(...args)
         }
         return;
