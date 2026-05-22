@@ -3,19 +3,19 @@
  * @return {Promise<any>}
  */
 var promiseAll = function (functions) {
-    const results = new Array(functions.length);
 
     return new Promise((resolve, reject) => {
+        const results = new Array(functions.length);
         let settled = 0;
         for (let i = 0; i < functions.length; i++) {
             functions[i]().then((result) => {
-                    results[i] = result;
-                    console.log(result)
-                    settled++;
-                    if (settled === functions.length) {
-                        resolve(results)
-                    }
+                results[i] = result;
+                console.log(result)
+                settled++;
+                if (settled === functions.length) {
+                    resolve(results)
                 }
+            }
             ).catch((err) => {
                 reject(err)
             })
