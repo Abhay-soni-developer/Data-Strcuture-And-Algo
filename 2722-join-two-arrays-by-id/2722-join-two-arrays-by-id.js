@@ -15,9 +15,8 @@ var join = function (arr1, arr2) {
         records.set(item.id, [item])
     })
 
-    console.log(records)
     const sortedIds = Array.from(new Set(merged.map(item => item.id))).sort((a, b) => a - b);
-    console.log(sortedIds)
+
     return sortedIds.map(id => {
         const record = records.get(id);
         return record.reduce((acc, item) => {
