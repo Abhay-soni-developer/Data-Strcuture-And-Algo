@@ -5,22 +5,35 @@
  * @return {Function}
  */
 var cancellable = function (fn, args, t) {
-    let cancel;
+    const timeout = setTimeout(() => {
+        fn(...args)
+    }, t)
 
-    new Promise((resolve, reject) => {
-        const timeout = setTimeout(() => {
-            resolve(fn(...args))
-        }, t)
-
-
-        cancel = function () {
-            clearTimeout(timeout)
-        }
-
-    })
+    let cancel = function () {
+        clearTimeout(timeout)
+    };
 
     return cancel;
 };
+
+
+// var cancellable = function (fn, args, t) {
+//     let cancel;
+
+//     new Promise((resolve, reject) => {
+//         const timeout = setTimeout(() => {
+//             resolve(fn(...args))
+//         }, t)
+
+
+//         cancel = function () {
+//             clearTimeout(timeout)
+//         }
+
+//     })
+
+//     return cancel;
+// };
 
 /**
  *  const result = [];
