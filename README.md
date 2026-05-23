@@ -29,6 +29,7 @@ lets write some solutions
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -52,6 +53,7 @@ lets write some solutions
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0374-guess-number-higher-or-lower](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 ## Interactive
 | Problem Name | Difficulty |
@@ -65,4 +67,8 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0013-roman-to-integer](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0013-roman-to-integer/) | Easy |
+## Divide and Conquer
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 <!---LeetCode Topics End-->
