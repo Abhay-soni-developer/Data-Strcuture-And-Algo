@@ -43,7 +43,5 @@ function createBoard(moves) {
         flag = !flag;
     }
 
-    console.log(board)
-
     return board;
 }
