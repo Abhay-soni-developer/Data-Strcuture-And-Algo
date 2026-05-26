@@ -4,11 +4,11 @@
  */
 var tictactoe = function (moves) {
     const board = createBoard(moves);
-    return checkWin(board)
+    return checkWin(board, moves)
 };
 
 
-function checkWin(board) {
+function checkWin(board, moves) {
     const lines = [
         // rows
         [board[0][0], board[0][1], board[0][2]],
@@ -25,19 +25,12 @@ function checkWin(board) {
         [board[0][2], board[1][1], board[2][0]],
     ];
 
-    let boxRemain = false;
-
     for(let line of lines) {
-        if(line[0]===null || line[1]===null || line[2]===null) {
-            boxRemain=true;
-            continue;
-        }
-        if(line[0]===line[1] && line[1]===line[2]) return line[0]
+        if(line[0]!==null && (line[0]===line[1] && line[1]===line[2])) return line[0]
     }
 
-    if(boxRemain) return "Pending"
 
-    return "Draw"
+    return moves.length===9 ? "Draw" : "Pending"
 }
 
 function createBoard(moves) {
@@ -51,5 +44,6 @@ function createBoard(moves) {
     }
 
     console.log(board)
+
     return board;
 }
