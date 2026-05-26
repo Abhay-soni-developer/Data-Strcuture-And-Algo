@@ -31,6 +31,7 @@ lets write some solutions
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
+| [1275-find-winner-on-a-tic-tac-toe-game](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/1275-find-winner-on-a-tic-tac-toe-game/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -38,6 +39,7 @@ lets write some solutions
 | [0013-roman-to-integer](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0013-roman-to-integer/) | Easy |
 | [0139-word-break](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0139-word-break/) | Medium |
 | [0290-word-pattern](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0290-word-pattern/) | Easy |
+| [1275-find-winner-on-a-tic-tac-toe-game](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/1275-find-winner-on-a-tic-tac-toe-game/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -71,4 +73,12 @@ lets write some solutions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1275-find-winner-on-a-tic-tac-toe-game](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/1275-find-winner-on-a-tic-tac-toe-game/) | Easy |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1275-find-winner-on-a-tic-tac-toe-game](https://github.com/Abhay-soni-developer/Data-Strcuture-And-Algo/tree/main/1275-find-winner-on-a-tic-tac-toe-game/) | Easy |
 <!---LeetCode Topics End-->
