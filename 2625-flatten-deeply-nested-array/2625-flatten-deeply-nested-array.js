@@ -60,7 +60,7 @@ var flat = function (arr, n) {
         if(current.length===0) stack.pop()
 
         while (current.length > 0) {
-            const el = current.shift()
+            const el = current.pop()
 
             if (Array.isArray(el) && stack.length - 1 < n) {
                 stack.push(el)
@@ -76,5 +76,5 @@ var flat = function (arr, n) {
 
     }
 
-    return result;
+    return result.reverse();
 };
