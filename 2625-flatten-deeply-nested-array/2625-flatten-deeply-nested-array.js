@@ -51,27 +51,28 @@ var flat = function (arr, n) {
 
     let result = []
     let stack = []
-    stack.push(arr)
+    stack.push([arr, arr.length])
 
 
     while (stack.length > 0) {
-        let current = stack[stack.length - 1]
+        let current = stack[stack.length - 1];
 
-        if(current.length===0) stack.pop()
+        if(current[1]===0) stack.pop();
 
-        while (current.length > 0) {
-            const el = current.shift()
+        while (current[1] > 0) {
+            const el = current[0][current[0].length-current[1]];
+            current[1]--;
 
             if (Array.isArray(el) && stack.length - 1 < n) {
-                stack.push(el)
+                stack.push([el, el.length]);
                 break;
             }
 
             if (current.length === 0) {
-                stack.pop()
+                stack.pop();
             }
 
-            result.push(el)
+            result.push(el);
         }
 
     }
